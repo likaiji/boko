@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>boko</title>
+    <link rel="stylesheet" href="stylesheets/reset.css"/>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="stylesheets/index.css"/>
+</head>
+<body ng-app="simpleBook">
+
+<!--导航栏部分-->
+<nav class="navbar navbar-default navStyle">
+    <!--container-fluid的width是100％，而container的width是用媒体查询获得的动态尺寸。-->
+    <div class="container-fluid" style="position: relative">
+
+        <!--左边logo部分-->
+        <div class="navbar-header">
+            <!--屏幕放小的时候的按钮-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                <span class="sr-only">简书</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logoImg" href="/"><img src="images/logo/logo.png" alt="logo"/></a>
+        </div>
+
+        <!--导航栏部分-->
+        <div class="collapse navbar-collapse navCenter" id="bs-example-navbar-collapse-1">
+            <!--中间导航栏部分-->
+            <ul class="nav navbar-nav searchBox">
+                <li><a href="/" id="checked">首页<span class="sr-only">首页</span></a></li>
+                <li><a href="/">下载APP</a></li>
+                <li>
+                    <div class="search" id="searchBox">
+                        <input type="text" placeholder="搜索" id="search" name="1"/>
+                        <div class="searchBtn"><img src="images/search.png" width="100%" height="100%" alt="search"/></div>
+                    </div>
+                </li>
+            </ul>
+
+            <!--右边导航栏-->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">Aa</a></li>
+                <li><a href="/login">登录</a></li>
+                <li class="regist"><span>注册</span></li>
+                <li class="writeAritcle">
+                    <img src="images/write.png" alt="write"/>
+                    <span>写文章</span>
+                </li>
+            </ul>
+         </div>
+
+    </div>
+</nav>
+
+<!--正文部分-->
+<div class="container">
+    <div class="content">
+        <!--轮播部分-->
+        <div class="carouselBox">
+            <!--左边区域-->
+            <div class="carouselBoxLeft">
+                <img id="carouselBoxLeftImg" src="images/carousel/carouselone.jpg" width="100%" height="100%" alt="carousel"/>
+            </div>
+            <!--右边区域-->
+            <div class="carouselBoxRight">
+                <ul id="carouselBoxRightImg">
+                    <li><img class="imgshow" id="m1" src="images/carousel/carouselone.jpg" width="100%" height="100%" alt="carousel"/></li>
+                    <li><img class="imgshow" src="images/carousel/carouseleight.jpg" width="100%" height="100%" alt="carousel"/></li>
+                    <li><img class="imgshow" src="images/carousel/carouselfive.jpg" width="100%" height="100%" alt="carousel"/></li>
+                    <li><img class="imgshow" src="images/carousel/carouselfour.jpg" width="100%" height="100%" alt="carousel"/></li>
+                    <li><img class="imgshow" src="images/carousel/carouselseven.jpg" width="100%" height="100%" alt="carousel"/></li>
+                    <li><img class="imgshow" src="images/carousel/carouselsix.jpg" width="100%" height="100%" alt="carousel"/></li>
+                    <li><img class="imgshow" src="images/carousel/carouselthree.jpg" width="100%" height="100%" alt="carousel"/></li>
+                    <li><img class="imgshow" src="images/carousel/carouseltwo.jpg" width="100%" height="100%" alt="carousel"/></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--下方左边部分-->
+        <div class="contentFollowLeft">
+            <!--热门专题部分-->
+            <div class="hotPoint">
+                <div  class="hotPointTitle">
+                    <p>热门专题</p>
+                </div>
+                <div class="hotPointContent" ng-controller="hotPoint as Ctrl">
+                    <div class="hotPointContentBox" ng-repeat="hotpointdata in Ctrl.data track by $index">
+                        <img src="{{hotpointdata.img}}" width="38px" height="38px" alt="headerPicture"/>
+                        <div class="hotPointContentBoxTitle"><p>{{hotpointdata.title}}</p></div>
+                    </div>
+
+                  </div>
+                <div class="morePoint">
+                    <p>更多热门专题 ></p>
+                </div>
+            </div>
+
+            <!--热门文章部分-->
+            <div class="hotarticle" ng-controller="hotarticle as Ctrls">
+                <!--大标题-->
+                <div  class="hotPointTitle">
+                    <p>热门文章</p>
+                </div>
+
+                <!--第一个大的文章详情-->
+                <div  class="hotarticleBox" ng-repeat="hotarticleData in Ctrls.data track by $index">
+                    <!--文章的id 隐藏-->
+                    <span class="articleId" style="display: none">{{hotarticleData.aritcleId}}</span>
+                    <!--左边文字部分-->
+                    <div  class="hotarticleBoxLeft">
+                        <ul>
+                            <li>
+                                <!--头像部分-->
+                                <img src="{{hotarticleData.headerImg}}" width="40px" height="40px" alt="user"/>
+                                <span class="username">绚之平淡</span>
+                                <span class="userTime">{{hotarticleData.writeTime}}</span>
+                            </li>
+                            <li>
+                                <p class="userContentTitle">{{hotarticleData.aritcleTitle}}</p>
+                                <span class="userContentContet" ng-bind-html="hotarticleData.articlecontent | trustHtml">
+                                    {{hotarticleData.articlecontent}}
+                                </span>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li>
+                                        <p>想法</p>
+                                    </li>
+                                    <li>
+                                        <img src="images/view.png" alt="view"/>
+                                        <span class="viewNum">4213</span>
+                                    </li>
+                                    <li>
+                                        <img src="images/commit.png" alt="commit"/>
+                                        <span class="commitNum">4213</span>
+                                    </li>
+                                    <li>
+                                        <img src="images/like.png" alt="like"/>
+                                        <span class="likeNum">4213</span>
+                                    </li>
+                                    <li>
+                                        <img src="images/donate.png" alt="donate"/>
+                                        <span class="donateNum">4213</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--右边图片部分-->
+                    <div  class="hotarticleBoxRight">
+                        <div class="hotarticleBoxRightImg">
+                            <img src="{{hotarticleData.headerImg}}" width="100%" height="100%" alt="userContent"/>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!--下方右边部分-->
+        <div class="contentFollowRight">
+            <!--图片部分-->
+            <ul>
+                <li><a href="/"><img src="images/newShow.png" width="100%" height="50px" alt="newShow"/></a></li>
+                <li><a href="/"><img src="images/dailyPaper.png" width="100%" height="50px" alt="dailyPaper"/></a></li>
+                <li><a href="/"><img src="images/sevenDayHot.png" width="100%" height="50px" alt="sevenDayHot"/></a></li>
+                <li><a href="/"><img src="images/threeDayHot.png" width="100%" height="50px" alt="threeDayHot"/></a></li>
+                <li><a href="/"><img src="images/dowload.png" width="100%" height="150px" alt="dowload"/></a></li>
+            </ul>
+
+
+            <!--下载部分-->
+            <div class="dowload">
+                <ul>
+                    <li>
+                        <a href="/">
+                            <div class="saoma">
+                                <img src="images/saoma.png" width="20px" height="20px" alt="saoma"/>
+                                <span>扫码</span>
+                                <!--下载的二维码部分-->
+                                <div class="dowloaderweimaBox">
+                                    <div class="dowloaderweima">
+                                        <img src="images/qqerweima.png" width="100%" height="100%" alt="qqerweima"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <div class="android">
+                                <img src="images/android.png" width="20px" height="20px" alt="android"/>
+                                <span>安卓</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <div class="ios">
+                                <img src="images/ios.png" width="20px" height="20px" alt="ios"/>
+                                <span>IOS</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--页脚部分-->
+<div class="container">
+    <div class="footer">
+        <p>http://lkj2017.cn     http://likaiji.wang </p>
+        <p>&copy;2012-2017 李开吉 / Tel:15108227743</p>
+    </div>
+</div>
+
+
+
+<script src="vendor/angular/angular.min.js"></script>
+<script src="vendor/angular/angular-sanitize.min.js"></script>
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="javascript/all.js"></script>
+<script src="javascript/demo.js"></script>
+</body>
+</html>

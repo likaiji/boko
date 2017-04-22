@@ -1,0 +1,33 @@
+{
+  "name": "aaa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": " "
+  },
+  "author": "likaiji",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "captchapng": "0.0.1",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "formidable": "^1.1.1",
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "cookie-parser": "^1.4.3",
+    "express-session": "^1.15.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-csslint": "^2.0.0",
+    "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

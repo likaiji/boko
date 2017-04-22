@@ -1,0 +1,22 @@
+/*提示框*/
+.fail{
+    width:50%;
+    height:500px;
+    /*background-color: red;*/
+    margin: auto;
+    position: relative;
+}
+.failTitle{
+    width:400px;
+    height:50px;
+    /*background-color: deeppink;*/
+    position: absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+}
+.failTitle p{
+    font-size: 18px;
+}

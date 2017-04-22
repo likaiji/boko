@@ -1,0 +1,50 @@
+{{#section 'aiticleShowCss'}}
+    <link rel="stylesheet" href="stylesheets/aiticleShow.css"/>
+{{/section}}
+
+
+<!--大的div-->
+<div class="container">
+    <div class="aiticleShowBox">
+        <!--标题部分-->
+        <div class="aiticleShowTitle">
+            <p id="aiticleShowTitle"></p>
+        </div>
+
+        <!--作者部分-->
+        <div class="author">
+            <div class="authorLeft" id="authorLeft">
+                <!--<img src="images/user/userone.jpeg"  width="100%" height="100%" alt="user"/>-->
+            </div>
+            <div class="authorRight">
+                <!--上半部分-->
+                <div class="authorRightTop">
+                    <ul>
+                        <li>作者</li>
+                        <li><a href="/">有备而来的路人甲</a></li>
+                        <li>+关注</li>
+                    </ul>
+                </div>
+                <!--下半部分-->
+                <div class="authorRightBottom">
+                    <ul>
+                        <li id="articleTime"></li>
+                        <li>字数 3052</li>
+                        <li>阅读 5072</li>
+                        <li>评论 286</li>
+                        <li>喜欢 426</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--正文部分-->
+        <div class="articleContent" id="articleContent">
+
+        </div>
+    </div>
+</div>
+
+{{#section 'aiticleShowJs'}}
+    <script src="javascript/aiticleShow.js"></script>
+{{/section}}

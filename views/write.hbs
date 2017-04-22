@@ -1,0 +1,38 @@
+{{#section 'writeCss'}}
+    <link rel="stylesheet" href="stylesheets/write.css"/>
+{{/section}}
+
+<!--写文章-->
+<div class="container">
+    <div class="writeArticle">
+
+        <!--标题部分-->
+        <div class="writeArticleTitle" id="writeArticleTitle">
+            <span>标题：</span>
+            <input type="text" name="inputTitle" id="inputTitle"/>
+        </div>
+
+        <!--选择图片部分-->
+        <div class="selectPicture" id="selectPicture">
+            <span>选择图片：</span>
+            <input type="file" accept="image/jpeg,image/png" name="imgfile" multiple id="imgfile"/>
+        </div>
+
+        <!--编辑框-->
+        <div id="summernote">
+
+        </div>
+
+        <!--按钮部分-->
+        <p>
+            <button id="sub" class="btn btn-primary" style="width:200px;font-size:16px">
+                发&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;表</button>
+        </p>
+
+        <p id="selectPictureurl" style="display: none;"></p>
+
+     </div>
+</div>
+{{#section 'writeJs'}}
+    <script src="javascript/write.js"></script>
+{{/section}}

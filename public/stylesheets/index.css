@@ -1,0 +1,489 @@
+/*导航栏样式*/
+.navStyle{
+    background-color: white;
+}
+/*logo图标样式*/
+.logoImg img{
+    width:60px;
+    height:30px;
+    margin-top: -5px;
+}
+
+/*中间导航栏部分*/
+.navCenter{
+    width:85%;
+    /*margin: auto;*/
+    float: right;
+    /*position: absolute;*/
+    /*left:0;*/
+    /*right:0;*/
+    /*top:0;*/
+    /*bottom:0;*/
+}
+/*导航栏的搜索框*/
+.search{
+    margin-top: 5px;
+    width:140px;
+    height:40px;
+    background-color:#EEEEEE ;
+    border-radius: 30px;
+    transition:all 0.5s ease-in;
+}
+.search input{
+    width:80px;
+    margin-top: 10px;
+    margin-left: 20px;
+    position: absolute;
+}
+.searchBtn{
+    width:20px;
+    height:20px;
+    position: absolute;
+    margin: auto;
+    top:4px;
+    bottom: 0;
+    right:5px;
+}
+
+/*右边导航栏*/
+/*写文章*/
+.writeAritcle{
+    margin-top: 5px;
+    border-radius: 5px;
+    width:100px;
+    height:40px;
+    background-color: #EA6F5A;
+    cursor: pointer;
+}
+.writeAritcle>img{
+    display: inline-block;
+    margin-left: 13px;
+}
+.writeAritcle>span{
+    display: inline-block;
+    margin-top:10px;
+    font-size:16px;
+    color:white;
+}
+.regist{
+    margin-top: 5px;
+    border-radius: 5px;
+    width:80px;
+    height:40px;
+    border:1px solid #EA6F5A;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.regist:hover{
+    background-color:#FEF7F6 ;
+}
+.regist>span{
+    color:#EA6F5A;
+    display: inline-block;
+    margin-top:10px;
+    font-size:16px;
+    margin-left: 20px;
+}
+
+
+/*设置nav下面的a标签的样式*/
+nav a{
+    font-size: 16px;
+}
+
+/*首页导航被选中状态*/
+#checked{
+    color:#EA6F5A;
+}
+
+
+/*正文部分*/
+.content{
+    width:80%;
+    margin:auto;
+    height:auto;
+}
+/*轮播部分*/
+.carouselBox{
+    width:100%;
+    height:300px;
+    margin:-20px auto auto auto;
+    border-radius: 5px;
+}
+/*左边区域*/
+.carouselBoxLeft{
+    width:65%;
+    height:100%;
+    float: left;
+}
+/*右边区域*/
+.carouselBoxRight{
+    float: right;
+    width:35%;
+    height:100%;
+    overflow: hidden;
+}
+.carouselBoxRight ul{
+    width:100%;
+    height:400%;
+    transition: all 0.5s;/*设置图片左右移动效果*/
+}
+.carouselBoxRight ul li{
+    width:100%;
+    height:12.5%;
+}
+
+/*下方左边部分*/
+.contentFollowLeft{
+    width:65%;
+    height:auto;
+    margin-top: 50px;
+    float: left;
+}
+/*热门专题部分*/
+.hotPoint{
+    width:100%;
+    height:150px;
+    /*background-color: pink;*/
+}
+.hotPointTitle{
+    border-left:5px solid #EA6F5A ;
+    height:24px;
+}
+.hotPointTitle p{
+    font-size: 14px;
+    padding-top: 2px;
+    margin-left:10px;
+}
+.hotPointContent{
+    width:80%;
+    height:110px;
+    margin-top: 10px;
+    /*background-color: #255625;*/
+    float: left;
+}
+.hotPointContentBox{
+    border: 1px solid #DCDCDC;
+    width:auto;
+    height:40px;
+    background-color: #F7F7F7;
+    cursor: pointer;
+    float: left;
+    margin-top: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+.hotPointContentBox img{
+    float: left;
+}
+.hotPointContentBoxTitle{
+    width:auto;
+    height: 50px;
+    margin-left: 40px;
+}
+.hotPointContentBoxTitle p{
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-top: 8px;
+}
+/*更多专题*/
+.morePoint{
+    width:20%;
+    height:110px;
+    /*background-color: #00b3ee;*/
+    margin-top: 10px;
+    float: left;
+    position: relative;
+}
+.morePoint p{
+    position: absolute;
+    margin: auto;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+
+/*下方右边部分*/
+.contentFollowRight{
+    width:30%;
+    height:auto;
+    margin-top: 50px;
+    float: right;
+    position: relative;
+}
+.contentFollowRight>ul>li>a>img{
+    margin-top: 10px;
+}
+/*下载部分*/
+.dowload{
+    width:100%;
+    height:50px;
+    margin-top: -70px;
+    position: absolute;
+    z-index: 30;
+}
+.dowload ul{
+    width:95%;
+    height:35px;
+    position: absolute;
+    margin: auto;
+    left:5px;
+    right:0;
+    top:0;
+    bottom: 0;
+}
+.dowload ul li{
+    float: left;
+    width:28%;
+    height:35px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.dowload ul li:nth-child(1){
+    background-color: #A5A5A5;
+    position: relative;
+}
+.saoma{
+    width:50px;
+    height:20px;
+    position: absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+}
+.saoma span{
+    font-size: 12px;
+    color:white;
+}
+
+.dowload ul li:nth-child(2){
+    background-color: #8BC453;
+    position: relative;
+}
+.android{
+    width:50px;
+    height:20px;
+    position: absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+}
+.android span{
+    font-size: 12px;
+    color:white;
+}
+
+.dowload ul li:nth-child(3){
+    background-color: #6DACF4;
+    position: relative;
+}
+.ios{
+    width:50px;
+    height:20px;
+    position: absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+}
+.ios span{
+    font-size: 12px;
+    color:white;
+}
+
+/*热门文章部分*/
+.hotarticle{
+    width:100%;
+    height:auto;
+    margin:20px auto;
+}
+/*大的文章详情*/
+.hotarticleBox{
+    width:100%;
+    height:200px;
+    margin-top: 20px;
+    border-top:1px solid #F0F0F0;
+}
+/*左边文字部分*/
+.hotarticleBoxLeft{
+    width:70%;
+    height:180px;
+    margin-top: 10px;
+    float: left;
+}
+.hotarticleBoxLeft>ul>li:nth-child(1){
+    width:100%;
+    height:40px;
+    cursor: pointer;
+    /*background-color: black;*/
+}
+.hotarticleBoxLeft>ul>li:nth-child(1) img{
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+}
+.username{
+    display: block;
+    padding-left: 50px;
+    padding-top: 10px;
+    font-size: 14px;
+    color:black;
+    position: absolute;
+}
+.userTime{
+    display: block;
+    padding-left:130px;
+    padding-top: 10px;
+    font-size: 14px;
+    color:#929292;
+}
+
+
+.hotarticleBoxLeft>ul>li:nth-child(2){
+    margin-top: 5px;
+    width:100%;
+    height:80px;
+    /*background-color: black;*/
+    overflow: hidden;
+}
+.userContentTitle{
+    font-size: 18px;
+    color:black;
+    cursor: pointer;
+}
+.userContentTitle:hover{
+    text-decoration: underline;
+}
+.userContentContet{
+    font-size: 12px;
+    color:#929292;
+}
+
+.hotarticleBoxLeft>ul>li:nth-child(3){
+    margin-top: 5px;
+    width:100%;
+    height:40px;
+}
+.hotarticleBoxLeft>ul>li:nth-child(3)>ul>li:nth-child(1){
+    width:60px;
+    height:25px;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+}
+.hotarticleBoxLeft>ul>li:nth-child(3)>ul>li{
+    padding-top: 2px;
+    width:60px;
+    height:25px;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+}
+.hotarticleBoxLeft>ul>li:nth-child(3)>ul>li{
+    cursor: pointer;
+}
+/*第三个li下面的第一个li的样式*/
+.hotarticleBoxLeft>ul>li:nth-child(3)>ul>li:nth-child(1){
+    border-radius: 5px;
+    border: 1px solid #F08F7E;
+}
+.hotarticleBoxLeft>ul>li:nth-child(3)>ul>li:nth-child(1)>p{
+    text-align: center;
+    color:#F08F7E;
+}
+/*第三个li下面的span标签样式*/
+.hotarticleBoxLeft>ul>li:nth-child(3)>ul span{
+    font-size: 10px;
+    color:#929292;
+}
+
+/*右边图片部分*/
+.hotarticleBoxRight{
+    width:25%;
+    height:180px;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+.hotarticleBoxRightImg{
+    width:120px;
+    height:90px;
+    position: absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+    float: right;
+}
+
+/*下载的二维码部分*/
+.dowloaderweimaBox{
+    width:185px;
+    height:190px;
+    background-color: white;
+    position: absolute;
+    margin: auto;
+    left:-70px;
+    right:0;
+    top:-280px;
+    bottom:0;
+    border: 1px solid #cccccc;
+    display: none;
+}
+.dowloaderweima{
+    width:150px;
+    height:170px;
+    position: absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+}
+.dowloaderweimaBox:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #cccccc;
+    position: absolute;
+    top: 100%;
+    left: 40%;
+}
+.dowloaderweimaBox:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 18px solid transparent;    /*形成四个三角形*/
+    border-top-color: white;  /*设置左边三角形颜色*/
+    position: absolute;
+    top: 100%;
+    left: 40%;
+}
+
+/*扫码hover 二维码出现*/
+.saoma:hover .dowloaderweimaBox{
+    display: block;
+}
+
+
+/*页脚*/
+.footer{
+    width:80%;
+    height:50px;
+    margin: auto;
+    margin-top: 30px;
+}
+.footer p{
+    font-size: 12px;
+    color:#969696;
+}

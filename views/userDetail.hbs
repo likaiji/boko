@@ -1,0 +1,20 @@
+{{#section "userDetailCss"}}
+    <link rel="stylesheet" href="stylesheets/userDetail.css">
+{{/section}}
+
+<!--头像部分-->
+<div class="userImgArea">
+    <div class="userImg"><img src="{{aaa.userimg}}" alt="me" width="100%" height="100%"></div>
+</div>
+
+<!--昵称 用户名部分-->
+<div class="usernameArea">
+    <p>昵称:<span>{{aaa.username}}</span></p>
+    <p>性别:<span>{{aaa.sex}}</span></p>
+    <p>电话号码:<span>{{aaa.phone}}</span></p>
+    <p>密码:<span>{{aaa.pwd}}</span></p>
+</div>
+
+{{#section "userDetailJs"}}
+    <script src="javascript/userDetail.js"></script>
+{{/section}}
